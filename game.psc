@@ -1,8 +1,10 @@
 Algoritmo  RegistroDePuntosVideojuego
+	//Entrada
 	Definir cantJugadores , i , j , kills  Como Entero
 	Definir puntajePartida , puntajeTotal , mejorPuntaje Como Real
-	Definir mejorNombre , nombre como cadena
+	Definir mejorNombre , nombre  como cadena
 	Definir respuesta Como Caracter
+	Definir seguirJugando Como Logico
 	
 	mejorPuntaje = 0
 	mejorNombre = ""
@@ -10,12 +12,15 @@ Algoritmo  RegistroDePuntosVideojuego
 	Escribir "BIENVENIDO ! Esta listo para iniciar una partida ? (S/N) "
 	Leer respuesta
 	
+	seguirJugando = (respuesta = "S" O respuesta = "s")
+	
+	//Proceso 
 	Mientras respuesta <> "S" Y respuesta <> "s" Y respuesta <> "N" Y respuesta <> "n" Hacer
 		Escribir "Opcion no valida, ingrese S o N:"
 		Leer respuesta
 	FinMientras
 	
-	Mientras respuesta = "S" O respuesta = "s" Hacer
+	Mientras seguirJugando Hacer
 		mejorPuntaje = 0
 		mejorNombre = ""
 		Escribir "Torneo Shooter"
@@ -26,7 +31,6 @@ Algoritmo  RegistroDePuntosVideojuego
 			Escribir "Ingrese el nombre del jugador"
 			Leer nombre
 			puntajeTotal = 0
-			//Bucle interno
 			Para j = 1 Hasta 5 Con Paso 1 Hacer
 				puntajePartida = 0
 				Esperar 2 Segundos
@@ -61,12 +65,12 @@ Algoritmo  RegistroDePuntosVideojuego
 				mejorNombre = nombre
 			FinSi
 			
-			//Puntuacion Final y Rendimiento del jugador
 			Escribir "PUNTUACION FINAL DEL JUGADOR: " , nombre , " es de: " , puntajeTotal
 		FinPara
 		
+		//Salida
 		Escribir "FIN DE LA PARTIDA.."
-		Escribir "MEJOR JUGADOR DE LA PARTIDA ES EL JUGADOR: ", Mayusculas(nombre) , " CON UNA PUNTUACION TOTAL DE: " , mejorPuntaje
+		Escribir "MEJOR JUGADOR DE LA PARTIDA ES EL JUGADOR: ", Mayusculas(mejorNombre) , " CON UNA PUNTUACION TOTAL DE: " , mejorPuntaje
 		Escribir "Desea iniciar una nueva partida? (S/N)"
 		Leer respuesta
 		
