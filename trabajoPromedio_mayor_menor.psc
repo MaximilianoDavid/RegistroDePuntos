@@ -1,25 +1,25 @@
 Algoritmo trabajoPromedio_mayor_menor
 	Definir promedio Como Real
-	Definir i , num , suma , mayor , menor  Como Entero
+	Definir i , edad , suma , mayor , menor  Como Entero
 	//Entrada
 	suma = 0
 	Para i = 1 Hasta 4 Hacer
 		Escribir "Ingrese un numero: (1-99)"
-		Leer num
-		Mientras num < 0 O num > 99 Hacer
+		Leer edad
+		Mientras edad < 0 O edad > 99 Hacer
 			Escribir "Escribir un número válido: (1 - 99)"
 			Leer num
 		FinMientras
 		Si i = 1 Entonces
-			mayor = num
-			menor = num
+			mayor = edad
+			menor = edad
 		FinSi
-		suma = suma + num
-		si num > mayor Entonces
-			mayor = num 
+		suma = suma + edad
+		si edad > mayor Entonces
+			mayor = edad
 		FinSi
-		si num < menor Entonces
-			menor = num
+		si edad < menor Entonces
+			menor = edad
 		FinSi
 	FinPara
 	promedio = suma/4
