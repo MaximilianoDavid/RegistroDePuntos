@@ -1,27 +1,30 @@
 Algoritmo trabajoPromedio_mayor_menor
-	Definir num, suma, promedio, mayor, menor Como Real
-	Definir i Como Entero
+	Definir promedio Como Real
+	Definir i , num , suma , mayor , menor  Como Entero
 	//Entrada
-	suma<-0
-	Para i <- 1 Hasta 4 Hacer
-		Escribir "Ingrese un numero:"
+	suma = 0
+	Para i = 1 Hasta 4 Hacer
+		Escribir "Ingrese un numero: (1-99)"
 		Leer num
-		si i = 1 Entonces
-			mayor<-num
-			menor<-num
+		Mientras num < 0 O num > 99 Hacer
+			Escribir "Escribir un número válido: (1 - 99)"
+			Leer num
+		FinMientras
+		Si i = 1 Entonces
+			mayor = num
+			menor = num
 		FinSi
-		//Proceso 
-		suma <- suma + num
+		suma = suma + num
 		si num > mayor Entonces
-			mayor <- num 
+			mayor = num 
 		FinSi
 		si num < menor Entonces
-			menor <- num
+			menor = num
 		FinSi
 	FinPara
-	promedio <- suma/4
+	promedio = suma/4
 	//Salida
-	Escribir "Promedio: ", promedio
-	Escribir "Mayor: ", mayor
-	Escribir "menor: ", menor
+	Escribir "Promedio Final: ", promedio
+	Escribir "El número más alto de la fila es: ", mayor
+	Escribir "El número más bajo de la fila es: ", menor
 FinAlgoritmo
