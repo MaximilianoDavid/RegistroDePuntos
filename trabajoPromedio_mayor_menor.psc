@@ -1,13 +1,16 @@
 Algoritmo trabajoPromedio_mayor_menor
 	Definir promedio Como Real
-	Definir i , edad , suma , mayor , menor  Como Entero
+	Definir i , edad , suma , mayor , menor, filas  Como Entero
 	//Entrada
 	suma = 0
-	Para i = 1 Hasta 4 Hacer
+	filas = 5
+	
+	
+	Para i = 1 Hasta filas Hacer 
 		Escribir "Ingrese un numero: (1-99)"
 		Leer edad
 		Mientras edad < 0 O edad > 99 Hacer
-			Escribir "Escribir un número válido: (1 - 99)"
+			Escribir "Escribir un nÃºmero vÃ¡lido: (1 - 99)"
 			Leer num
 		FinMientras
 		Si i = 1 Entonces
@@ -25,6 +28,6 @@ Algoritmo trabajoPromedio_mayor_menor
 	promedio = suma/4
 	//Salida
 	Escribir "Promedio Final: ", promedio
-	Escribir "El número más alto de la fila es: ", mayor
-	Escribir "El número más bajo de la fila es: ", menor
+	Escribir "El nÃºmero mÃ¡s alto de la fila es: ", mayor
+	Escribir "El nÃºmero mÃ¡s bajo de la fila es: ", menor
 FinAlgoritmo
