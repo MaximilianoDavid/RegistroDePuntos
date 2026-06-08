@@ -71,14 +71,14 @@ Algoritmo  RegistroDePuntosVideojuego
 			//Puntuacion Final y Rendimiento del jugador
 			Escribir "##############################"
 			Escribir "PUNTUACION FINAL DEL JUGADOR:" 
-			Escribir  nombre , " : " , puntajeTotal,"pts"
+			Escribir "### " ,nombre , " : " , puntajeTotal,"pts" , " ###"
 			Escribir "##############################"
 		FinPara
 		
 		Escribir "FIN DE LA PARTIDA.."
 		Escribir "################################################"
 		Escribir "## MEJOR JUGADOR DE LA PARTIDA ES EL JUGADOR: ##"
-		Escribir "### ", Mayusculas(nombre) , " : " , mejorPuntaje ,"pts" , " ###"
+		Escribir "### ", Mayusculas(mejorNombre) , " : " , mejorPuntaje ,"pts" , " ###"
 		Escribir "################################################"
 		Escribir "Desea iniciar una nueva partida? (S/N)"
 		Leer respuesta
